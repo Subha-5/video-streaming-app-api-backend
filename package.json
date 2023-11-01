@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "a backend to study industry standard practices",
+  "main": "index.js",
+  "keywords": ["javascript", "backend"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Subha Sadhu",
+  "license": "ISC"
+}
