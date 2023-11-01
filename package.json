@@ -2,11 +2,19 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "a backend to study industry standard practices",
+  "type": "module",
   "main": "index.js",
-  "keywords": ["javascript", "backend"],
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "author": "Subha Sadhu",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
 }
