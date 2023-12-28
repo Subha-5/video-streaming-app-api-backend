@@ -1,4 +1,6 @@
 import { v2 as cloudinary } from "cloudinary";
+import { extractPublicId } from 'cloudinary-build-url'
+
 import fs from "fs";
 
 cloudinary.config({
@@ -24,4 +26,15 @@ const uploadOnCloudinary = async (localFilePath) => {
   }
 };
 
-export { uploadOnCloudinary };
+const deleteFromCloudinary = async (imageUrl) => {
+  try {
+    const publicId = extractPublicId(imageUrl)
+    await cloudinary.uploader
+      .destroy(publicId)
+      .then((result) => console.log("Image successfully deleted from cloudinary\n", result));
+  } catch (error) {
+    console.log("Error: Image could not be deleted from cloudinary.")
+  }
+};
+
+export { uploadOnCloudinary, deleteFromCloudinary };
