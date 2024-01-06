@@ -134,7 +134,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
   // send cookie
   const loggedInUser = await User.findById(user._id).select(
-    "-password, -refreshToken"
+    "-password -refreshToken"
   );
 
   const options = {
